@@ -1,7 +1,6 @@
 # Variant Annotator CLI
 
 A Python command-line tool to annotate dbSNP RSIDs using the Ensembl VEP API.
-Created for Bio301 Advanced Genomics Project.
 
 ## Features
 
@@ -19,22 +18,16 @@ Created for Bio301 Advanced Genomics Project.
 
 ### Prerequisites
 
-- Python 3.6 or later
-- pip (Python package installer)
+- Python 
 
 ### Steps
 
 1. Clone this repository:
    ```
-   git clone <repository-url>
-   cd variant-annotator
+   git clone https://github.com/mantavya0807/BilliontoOne
+   cd BilliontoOne
    ```
 
-2. Set up a virtual environment (recommended):
-   ```
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
 
 3. Install dependencies:
    ```
@@ -52,7 +45,7 @@ python variant_annotator.py --input INPUT_FILE --output OUTPUT_FILE
 ```
 
 Where:
-- `INPUT_FILE` is a text file with one RSID per line (e.g., "rs12345")
+- `INPUT_FILE` is a text file with one RSID per line
 - `OUTPUT_FILE` is where the TSV results will be saved
 
 Example:
@@ -70,13 +63,12 @@ python variant_annotator.py --input INPUT_FILE --output OUTPUT_FILE [OPTIONS]
 
 Available options:
 - `--species` or `-s`: Species name (default: "human")
-- `--additional-fields` or `-a`: Include extra fields in the output
 - `--verbose` or `-v`: Show detailed progress info
-- `--max-retries` or `-r`: Number of retry attempts (default: 3)
+- `--force` or `-f`: Overwrite output file if it already exists
 
 Example with advanced options:
 ```
-python variant_annotator.py --input rs_ids.txt --output annotations.tsv --species human --additional-fields variant_class --verbose
+python variant_annotator.py --input rs_ids.txt --output annotations.tsv --species human --verbose --force
 ```
 
 ## Output Format
@@ -88,7 +80,6 @@ The tool creates a tab-separated values (TSV) file with these columns:
 - `end`: End position of the variant
 - `most_severe_consequence`: The most severe consequence
 - `gene_symbols`: Comma-separated list of affected genes
-- Any additional fields requested with `--additional-fields`
 
 ## Running Tests
 
