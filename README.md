@@ -15,13 +15,6 @@ Created for Bio301 Advanced Genomics Project.
   - List of affected genes
 - Outputs results as a TSV file
 
-## Files
-
-- **variant_annotator.py**: Main script that performs the variant annotation using Ensembl VEP API
-- **test_variant_annotator.py**: Unit tests to verify the main functionality
-- **rs_ids.txt**: Sample input file with RSIDs to query
-- **annotations.tsv**: Output file containing the annotation results
-
 ## Installation
 
 ### Prerequisites
@@ -33,11 +26,17 @@ Created for Bio301 Advanced Genomics Project.
 
 1. Clone this repository:
    ```
-   git clone https://github.com/mantavya0807/BilliontoOne.git
-   cd BilliontoOne
+   git clone <repository-url>
+   cd variant-annotator
    ```
 
-2. Install dependencies:
+2. Set up a virtual environment (recommended):
+   ```
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. Install dependencies:
    ```
    pip install -r requirements.txt
    ```
